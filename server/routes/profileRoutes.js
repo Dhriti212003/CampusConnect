@@ -9,16 +9,6 @@ router.get("/", protect, getProfile);
 
 router.put("/", protect, updateProfile);
 
-router.get(
-    "/organizer-test",
-    protect,
-    authorize("organizer"),
-    (req, res) => {
-        res.json({
-            success: true,
-            message: "Organizer access granted"
-        });
-    }
-);
+
 
 module.exports = router;

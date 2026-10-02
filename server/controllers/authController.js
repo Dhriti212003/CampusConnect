@@ -14,7 +14,8 @@ const registerUser = async (req,res,next) => {
             branch,
             graduationYear,
             skills,
-            interests
+            interests,
+            role
         }=req.body;
         
         if(!name || !email || !password){
@@ -42,7 +43,8 @@ const registerUser = async (req,res,next) => {
             branch,
             graduationYear,
             skills,
-            interests
+            interests,
+            role
         });
 
         res.status(201).json({
